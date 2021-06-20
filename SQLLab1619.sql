@@ -1,0 +1,18 @@
+--1. SELECT * FROM Customers;
+--2. SELECT DISTINCT Country FROM Customers;
+--3. SELECT * FROM Customers WHERE CustomerID LIKE 'Bl%';
+--4. SELECT TOP 100 * FROM Orders;
+--5. SELECT * FROM Customers WHERE PostalCode IN ('1010', '3012', '12209', '05023');
+--6. SELECT * FROM Orders WHERE ShipRegion IS NOT NULL;
+--7. SELECT * FROM Customers ORDER BY Country, City;
+--8. INSERT INTO Customers VALUES ('FUBAR', 'Holtron Asylum', 'Bella Booboo', 'Snooticus', '143 Kissy Face', 'Barkville', 'UC', '14341', 'Dogtopia', '01-867-5309', '01-8675310');
+--9. UPDATE Orders SET ShipRegion = 'EuroZone' WHERE ShipCountry = 'France';
+--10. DELETE FROM [Order Details] WHERE Quantity = 1;
+--11. SELECT AVG([Quantity]) AS 'Average', MIN([Quantity]) AS 'Minimum', MAX([Quantity]) AS 'Maximum' FROM [Order Details];
+--12. SELECT OrderId, AVG([Quantity]) AS 'Average', MIN([Quantity]) AS 'Minimum', MAX([Quantity]) AS 'Maximum' FROM [Order Details] GROUP BY Order;
+--13. SELECT CustomerId FROM Orders WHERE OrderId = '10290';
+--14a. SELECT Orders.OrderID, Customers.ContactName FROM  Orders INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+--14b. SELECT Orders.OrderID, Customers.ContactName FROM Orders LEFT JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+--14c. SELECT Orders.OrderID, Customers.ContactName FROM Orders RIGHT JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+--15. SELECT FirstName FROM Employees WHERE ReportsTo IS NULL;
+--16. SELECT FirstName FROM Employees WHERE ReportsTo = (SELECT EmployeeID FROM Employees WHERE FirstName = 'Andrew');
